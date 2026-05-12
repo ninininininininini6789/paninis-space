@@ -1,37 +1,44 @@
-/* adding colour to my topnav */
-.topnav {
-  background-color: #cd81f3;
-  overflow: auto;
+body {
+  background-color: #121214; /* Dark background from image */
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 50px;
 }
 
-/* links inside the top nav style */
-.topnav a {
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+.container {
+  display: grid;
+  /* Creates two columns: one large, one medium */
+  grid-template-columns: 1.5fr 1fr;
+  /* Three rows: header, top sidebar, bottom sidebar */
+  grid-template-rows: 80px 200px 120px;
+  gap: 20px;
+  width: 900px;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ffacfb;
-  color: black;
+/* Shared styles for all boxes */
+.container div {
+  background-color: #e0a3f0; /* The lavender color */
+  border-radius: 20px;       /* Smooth rounded corners */
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #ddbac4;
-  color: white;
+/* Header spans across both columns */
+.header {
+  grid-column: 1 / span 2;
+  margin: 0 40px; /* Slight inset for the header */
 }
 
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* makes links go in a row */
+/* Main left box spans the height of both sidebar boxes */
+.main-left {
+  grid-row: 2 / span 2;
+}
+
+.sidebar-top {
+  grid-column: 2;
+}
+
+.sidebar-bottom {
+  grid-column: 2;
 }
