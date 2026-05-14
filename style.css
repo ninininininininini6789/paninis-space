@@ -1,44 +1,71 @@
+/* Page styling */
 body {
-  background-color: #fcefff; 
-  display: flex;
-  justify-content: center;
-  padding: 50px;
+    background-color: #f3ebf7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
 }
 
+/* Navigation bar */
+.topnav {
+    background-color: #d39be8;
+    width: 70%;
+    margin: 0 auto 40px auto;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Main layout */
 .container {
-  display: grid;
-
-  grid-template-columns: 1.5fr 1fr;
-
-  grid-template-rows: 80px 200px 120px;
-  gap: 20px;
-  width: 900px;
-  background: white;
-  padding: 40px;
-  border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    align-items: flex-start;
 }
 
-/* Shared styles for all boxes */
-.container div {
-  background-color: #e0a3f0; /* The lavender color */
-  border-radius: 20px;       /* Smooth rounded corners */
+/* General box styling */
+.box {
+    background-color: #d39be8;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Header spans across both columns */
-.header {
-  grid-column: 1 / span 2;
-  margin: 0 40px; /* Slight inset for the header */
+.box h3 {
+    margin-top: 0;
+    font-weight: normal;
 }
 
-/* Main left box spans the height of both sidebar boxes */
-.main-left {
-  grid-row: 2 / span 2;
+/* Left large box */
+.large-box {
+    width: 600px;
+    height: 230px;
 }
 
-.sidebar-top {
-  grid-column: 2;
+/* Right column */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.sidebar-bottom {
-  grid-column: 2;
+/* Right top box */
+.small-top {
+    width: 400px;
+    height: 250px;
+}
+
+/* Right bottom box */
+.small-bottom {
+    width: 400px;
+    height: 250px;
 }
